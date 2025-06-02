@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-header h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #333;
+}
+
+.auth-header p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group input:focus {
+    border-color: #6e8efb;
+    outline: none;
+}
+
+.btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary {
+    background: #6e8efb;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #5a78d1;
+    transform: scale(1.05);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.auth-footer {
+    margin-top: 20px;
+}
+
+.auth-footer p {
+    font-size: 1em;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #6e8efb;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.alert-danger {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    z-index: 1000;
+    display: none;
+    transition: transform 0.5s ease-in-out, opacity 0.5s;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification.success {
+    background-color: #4caf50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}

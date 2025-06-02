@@ -1,0 +1,85 @@
+/* assets/css/navbar.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+.sidebar {
+    width: 200px; /* Уменьшаем ширину */
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .profile-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile-card .avatar img {
+    width: 80px; /* Уменьшаем размер аватара */
+    height: 80px; /* Уменьшаем размер аватара */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .profile-card .avatar img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar .profile-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.sidebar .profile-card p {
+    color: #bdc3c7;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-nav ul li {
+    margin: 15px 0;
+}
+
+.dashboard-nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dashboard-nav ul li a i {
+    margin-right: 10px;
+}
+
+.dashboard-nav ul li a:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+.dashboard-nav ul li.active a {
+    background-color: #1abc9c;
+}
+
+.main-content {
+    margin-left: 220px; /* Уменьшаем отступ */
+    padding: 20px;
+    width: calc(100% - 220px); /* Уменьшаем ширину */
+    transition: margin-left 0.3s ease-in-out;
+}

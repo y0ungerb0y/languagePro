@@ -1,0 +1,481 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .profile-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile-card .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .profile-card .avatar img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar .profile-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.sidebar .profile-card p {
+    color: #bdc3c7;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-nav ul li {
+    margin: 15px 0;
+}
+
+.dashboard-nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dashboard-nav ul li a i {
+    margin-right: 10px;
+}
+
+.dashboard-nav ul li a:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+.dashboard-nav ul li.active a {
+    background-color: #1abc9c;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.welcome-banner {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.welcome-banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 1.2em;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.stat-icon:hover {
+    transform: rotate(360deg);
+}
+
+.stat-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.stat-info p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.progress-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    background-color: #1abc9c;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.progress-section p {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+}
+
+.recent-activity {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-list {
+    margin-top: 20px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.activity-item:hover {
+    transform: translateX(10px);
+}
+
+.activity-icon {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.activity-content {
+    flex-grow: 1;
+}
+
+.activity-content p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.activity-time {
+    font-size: 0.9em;
+    color: #999;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .profile-card {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .profile-card .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar .profile-card .avatar img:hover {
+    transform: scale(1.1);
+}
+
+.sidebar .profile-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.sidebar .profile-card p {
+    color: #bdc3c7;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-nav ul li {
+    margin: 15px 0;
+}
+
+.dashboard-nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.dashboard-nav ul li a i {
+    margin-right: 10px;
+}
+
+.dashboard-nav ul li a:hover {
+    background-color: #34495e;
+    transform: scale(1.05);
+}
+
+.dashboard-nav ul li.active a {
+    background-color: #1abc9c;
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.welcome-banner {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.welcome-banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 1.2em;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.stat-icon:hover {
+    transform: rotate(360deg);
+}
+
+.stat-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.stat-info p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.progress-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    background-color: #1abc9c;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.progress-section p {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+}
+
+.recent-activity {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity-list {
+    margin-top: 20px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.activity-item:hover {
+    transform: translateX(10px);
+}
+
+.activity-icon {
+    font-size: 1.5em;
+    color: #3498db;
+    margin-right: 15px;
+}
+
+.activity-content {
+    flex-grow: 1;
+}
+
+.activity-content p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.activity-time {
+    font-size: 0.9em;
+    color: #999;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
