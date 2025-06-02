@@ -1,8 +1,6 @@
 <?php
-include 'includes/config.php';
-
 if(isset($_SESSION['user_id'])) {
-    header('Location: dashboard.php');
+    header('Location: /dashboard');
     exit;
 }
 
@@ -50,7 +48,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             </form>
             <div id="error-message" class="error-message"></div>
             <div class="auth-footer">
-                <p>Еще нет аккаунта? <a href="register.php">Зарегистрироваться</a></p>
+                <p>Еще нет аккаунта? <a href="/register">Зарегистрироваться</a></p>
             </div>
         </div>
     </div>
@@ -71,14 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (username && password) {
             const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'login.php', true);
+            xhr.open('POST', '/login', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     const response = JSON.parse(xhr.responseText);
                     if (response.success) {
-                        window.location.href = 'dashboard.php';
+                        window.location.href = '/dashboard';
                     } else {
                         errorMessage.textContent = response.error;
                     }

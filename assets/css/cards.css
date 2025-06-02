@@ -1,5 +1,4 @@
-/* assets/css/cards.css */
-
+/* cards.css */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -242,99 +241,11 @@ body {
     color: #333;
 }
 
-.form-group input, .form-group select {
-    width: 20%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-/* Дополнения для модального окна */
-.modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    animation: fadeIn 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-content h2 {
-    color: #2c3e50;
-    margin-bottom: 25px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #34495e;
-}
-
 .form-group input,
 .form-group select {
-    width: 90%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: border 0.3s;
-    background-color: #f9f9f9;
-}
-
-.form-group1 input:focus,
-.form-group1 select:focus {
-    border-color: #6e8efb;
-    outline: none;
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.1);
-}
-
-.modal-content button[type="submit"] {
     width: 100%;
-    padding: 12px;
-    background-color: #6e8efb;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
-}
-
-.modal-content button[type="submit"]:hover {
-    background-color: #5a78d1;
-}
-
-/* Анимации */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Адаптивность */
-@media (max-width: 600px) {
-    .modal-content {
-        width: 95%;
-        padding: 20px;
-    }
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Важно для правильного отображения */
 }

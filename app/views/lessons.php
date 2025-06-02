@@ -2,7 +2,7 @@
 $page_title = 'Уроки';
 $page_css = 'lessons';
 $page_js = 'lessons';
-include 'includes/header.php';
+include 'app/views/components/header.php';
 
 // Получаем уроки
 $stmt = $pdo->prepare("SELECT * FROM lessons ORDER BY level ASC");
@@ -72,4 +72,4 @@ $user_level = $stmt->fetchColumn();
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'app/views/components/footer.php'; ?>

@@ -2,7 +2,7 @@
 $page_title = 'Настройки';
 $page_css = 'settings';
 $page_js = 'settings';
-include 'includes/header.php';
+include 'app/views/components/header.php';
 
 // Получаем информацию о пользователе
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
@@ -121,4 +121,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'app/views/components/footer.php'; ?>

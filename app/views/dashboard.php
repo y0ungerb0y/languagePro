@@ -2,7 +2,7 @@
 $page_title = 'Личный кабинет';
 $page_css = 'dashboard';
 $page_js = 'dashboard';
-include 'includes/header.php';
+include 'app/views/components/header.php';
 
 // Получаем прогресс пользователя
 $stmt = $pdo->prepare("SELECT * FROM user_progress WHERE user_id = ?");
@@ -97,4 +97,4 @@ $lessons = $stmt->fetch();
     </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'app/views/components/footer.php'; ?>
