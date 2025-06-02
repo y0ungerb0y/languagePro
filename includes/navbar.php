@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="profile-card">
         <div class="avatar">
-            <img src="" alt="Avatar">
+            <img src="uploads/avatars/<?= $user['avatar'];?>" alt="Avatar"> 
         </div>
         <h3><?php echo $user['username']; ?></h3>
         <p><?php echo $user['email']; ?></p>

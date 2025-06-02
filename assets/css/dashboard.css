@@ -10,44 +10,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar .profile-card {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.sidebar .profile-card .avatar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar .profile-card .avatar img:hover {
-    transform: scale(1.1);
-}
-
-.sidebar .profile-card h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-.sidebar .profile-card p {
-    color: #bdc3c7;
-}
-
 .dashboard-nav ul {
     list-style: none;
     padding: 0;
@@ -250,44 +212,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar .profile-card {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.sidebar .profile-card .avatar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar .profile-card .avatar img:hover {
-    transform: scale(1.1);
-}
-
-.sidebar .profile-card h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-.sidebar .profile-card p {
-    color: #bdc3c7;
-}
-
 .dashboard-nav ul {
     list-style: none;
     padding: 0;
