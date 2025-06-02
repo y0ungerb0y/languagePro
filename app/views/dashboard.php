@@ -77,24 +77,4 @@ $lessons = $stmt->fetch();
     </div>
 </div>
 
-<div class="recent-activity">
-    <h2>Недавняя активность</h2>
-    <div class="activity-list">
-        <div class="activity-item">
-            <i class="fas fa-layer-group activity-icon"></i>
-            <div class="activity-content">
-                <p>Вы добавили 5 новых карточек</p>
-                <span class="activity-time">2 часа назад</span>
-            </div>
-        </div>
-        <div class="activity-item">
-            <i class="fas fa-book-open activity-icon"></i>
-            <div class="activity-content">
-                <p>Вы завершили урок "Основные глаголы"</p>
-                <span class="activity-time">Вчера</span>
-            </div>
-        </div>
-    </div>
-</div>
-
 <?php include 'app/views/components/footer.php'; ?>

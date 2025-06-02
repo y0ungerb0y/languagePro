@@ -7,12 +7,12 @@ include 'app/views/components/header.php';
 // Получаем уроки
 $stmt = $pdo->prepare("SELECT * FROM lessons ORDER BY level ASC");
 $stmt->execute();
-$lessons = $stmt->fetchAll();
+$lessons = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Получаем завершенные уроки пользователя
 $stmt = $pdo->prepare("SELECT lesson_id FROM user_lessons WHERE user_id = ?");
 $stmt->execute([$user_id]);
-$completed_lessons = array_column($stmt->fetchAll(), 'lesson_id');
+$completed_lessons = array_column($stmt->fetchAll(PDO::FETCH_ASSOC), 'lesson_id');
 
 // Получаем уровень пользователя
 $stmt = $pdo->prepare("SELECT level FROM user_progress WHERE user_id = ?");
