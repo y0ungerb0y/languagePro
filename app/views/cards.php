@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 $language = $_POST['language'] === 'all' ? null : htmlspecialchars(trim($_POST['language']));
                 $difficulty = $_POST['difficulty'] === 'all' ? null : htmlspecialchars(trim($_POST['difficulty']));
                 
-                $query = "SELECT * FROM cards WHERE user_id = ?";
+                $query = "SELECT * FROM word_cards WHERE user_id = ?";
                 $params = [$_SESSION['user_id']];
                 
                 if ($language) {
